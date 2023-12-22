@@ -1,0 +1,85 @@
+/* laptop */
+@media screen and (max-width : 922px) {
+    .input-cari .button-secondary {
+        width: 120px;
+        font-size: 14px;
+        border-radius: 0;
+    }
+
+    .input-cari .button-primary {
+        font-size: 24px;
+        border-radius: 0 0 10px 10px !important;
+    }
+
+    #rekomendasi {
+        margin-top: 100px;
+    }
+
+    .button-fasilitas3 {
+        width: 100%;
+    }
+
+    .button-primary {
+        display: block;
+        width: 100%;
+    }
+
+    .button-secondary {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* hp atau tablet */
+@media screen and (max-width : 576px) {
+    .img-satu {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 34px;
+    }
+
+    .sub-title {
+        font-size: 16px;
+    }
+
+    .card-fasilitas {
+        margin: 15px 0;
+    }
+
+    #search h2 {
+        font-size: 42px;
+        line-height: 52px;
+    }
+
+    #search p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .input-cari .button-secondary {
+        width: 50%;
+        height: 60px;
+        border-radius: 0;
+    }
+
+    .input-cari .button-primary {
+        height: 60px;
+        width: 30%;
+        font-size: 20px;
+        border-radius: 0;
+    }
+
+    .input-cari .form-control {
+        height: 60px !important;
+    }
+}
+
+/* hp */
+@media screen and (max-width : 350px) {
+    
+}
+
+
+

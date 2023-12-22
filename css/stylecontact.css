@@ -1,0 +1,204 @@
+:root {
+    --pr-color : #FFCE45;
+}
+
+.isi {
+    border: none; /* Tambahkan border */
+    padding: 20px;
+    background: #FFFF;
+    color: #191919;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Menyusun konten dalam kotak */
+}
+
+.address {
+    flex: 1;
+    padding-right: 20px; /* Berikan jarak antara kolom */
+}
+
+.gmap {
+    flex: 1;
+}
+
+.gambar {
+    flex: 1;
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.kirim{
+    border: none; /* Tambahkan border */
+    padding: 20px;
+    background: #FFFF;
+    color: #191919;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} /* Menyusun konten dalam kotak */
+
+/* Styling untuk judul */
+.isi h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Styling untuk paragraf */
+.isi p {
+    font-size: 24px;
+    margin: 1; /* Hapus margin bawaan paragraf */
+}
+
+/* Styling untuk tautan */
+.isi a {
+    color: #0070C0; /* Warna tautan */
+    text-decoration: none;
+}
+
+.isi a:hover {
+    text-decoration: underline; /* Tambahkan garis bawah saat tautan dihover */
+}
+
+/* Penambahan ruang pada tautan */
+.isi a::after {
+    content: ' ';
+    margin-left: 5px;
+}
+
+.heading {
+    padding: 100px 0 50px;
+    color: var(--pr-color);
+    text-align: center;
+    font-size: 40px;
+}
+
+
+.kontak-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.kontak-info img {
+    width: 50%;
+}
+.kontak-info form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.kontak-info form input, .kontak-info form textarea {
+    padding: 2%;
+    margin: 2%;
+    border-radius: 20px;
+}
+
+/* ... Your existing CSS ... */
+
+/* Gaya khusus untuk layar berukuran kecil (hp) */
+/* Gaya khusus untuk layar berukuran kecil (maksimum 600px) */
+@media only screen and (max-width: 767px) {
+    .isi,
+    .kontak-info,
+    .address,
+    .gmap {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .kontak-info img {
+        width: 100%; /* Mengisi lebar maksimum */
+    }
+
+    .kontak-info form {
+        width: 100%;
+    }
+
+    .kirim {
+        flex-direction: column;
+    }
+
+    .heading {
+        font-size: 30px;
+    }
+
+    .isi h2,
+    .isi p {
+        font-size: 20px;
+    }
+
+    .gmap {
+        width: 100%; /* Mengisi lebar maksimum untuk layar kecil */
+        margin-top: 20px; /* Memberikan margin atas pada gmap */
+    }
+
+    /* Menyesuaikan ukuran iframe pada peta Google Maps */
+    .gmap iframe {
+        width: 100%; /* Mengisi lebar maksimum iframe */
+        height: 200px; /* Sesuaikan tinggi iframe sesuai kebutuhan */
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .kontak-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .kontak-info img {
+        width: 70%;
+    }
+
+    .kontak-info .gmap {
+        width: 70%; /* Mengatur lebar gmap pada layar sedang */
+        margin-top: 20px; /* Memberikan margin atas pada gmap */
+    }
+
+    .kontak-info form {
+        width: 70%;
+    }
+
+    /* Menyesuaikan ukuran iframe pada peta Google Maps di tablet */
+    .gmap iframe {
+        width: 100%; /* Mengisi lebar maksimum iframe */
+        height: 400px; /* Sesuaikan tinggi iframe sesuai kebutuhan */
+    }
+}
+
+/* Gaya khusus untuk layar berukuran besar (dekstop) */
+/* Gaya khusus untuk layar berukuran besar (dekstop) */
+@media only screen and (min-width: 1024px) {
+    .isi,
+    .gmap,
+    .address,
+    .kontak-info {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .kontak-info img {
+        width: 50%;
+    }
+
+    .kontak-info .gmap {
+        width: 50%; /* Mengatur lebar gmap pada layar besar */
+        margin-top: 0; /* Menghapus margin atas pada gmap */
+    }
+
+    .kontak-info form {
+        width: 50%;
+    }
+
+    /* Menyesuaikan ukuran iframe pada peta Google Maps di layar besar */
+    .gmap iframe {
+        width: 100%; /* Mengisi lebar maksimum iframe */
+        height: 400px; /* Sesuaikan tinggi iframe sesuai kebutuhan */
+    }
+}
+

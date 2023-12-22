@@ -1,0 +1,242 @@
+.menu1{
+    width: 100%;
+    padding: 100px 0;
+}
+
+.menu1 h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.menu1 h1 span{
+    color: #FFCE45;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+
+.menu1 h1 span::after{
+  
+    width: 100%;
+    height: 2px;
+    background: #FFCE45;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.menu2{
+    width: 100%;
+    padding: 100px 0;
+}
+
+.menu2 h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.menu2 h1 span{
+    color: #FFCE45;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+
+.menu2 h1 span::after{
+
+    width: 100%;
+    height: 2px;
+    background: #FFCE45;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+/* Common styles for both mobile and desktop */
+
+.menu_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.menu_card {
+    width: 325px;
+    height: 480px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu_image {
+    width: 300px;
+    height: 245px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.menu_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+}
+
+.menu_image:hover img {
+    transform: scale(1.1);
+}
+
+.small_card {
+    width: 45px;
+    height: 45px;
+    float: right;
+    position: relative;
+    top: -240px;
+    right: -8px;
+    opacity: 0;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.menu_card:hover .small_card {
+    position: relative;
+    top: -240px;
+    right: 20px;
+    opacity: 1;
+}
+
+.small_card i {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+    color: #fff;
+    cursor: pointer;
+    text-shadow: 0 0 6px #000;
+    transition: 0.2s;
+}
+
+.small_card i:hover {
+    color: #fac031;
+}
+
+.menu_info h2 {
+    width: 60%;
+    text-align: center;
+    margin: 10px auto 10px auto;
+    font-size: 25px;
+    color: #fac031;
+}
+
+.menu_info p {
+    color: #fff;
+    text-align: center;
+    margin-top: 8px;
+    line-height: 21px;
+}
+
+.menu_info h3 {
+    color: beige;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.menu_icon {
+    color: #fac031;
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+
+.menu_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    background: var(--pr-color);
+    padding: 8px 10px;
+    margin: 0 80px;
+    transition: 0.3s;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .menu h1 {
+        font-size: 32px;
+    }
+
+    .menu h1 span::after {
+        bottom: 10px;
+    }
+
+    .menu_box {
+        grid-template-columns: 1fr;
+    }
+
+    .menu_card {
+        width: 100%;
+        height: auto;
+    }
+
+    .small_card {
+        top: -50px;
+    }
+}
+
+/* Gaya khusus untuk layar berukuran sedang (tablet) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .menu1 h1,
+    .menu2 h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .menu1 h1 span,
+    .menu2 h1 span {
+        margin-left: 10px;
+    }
+
+    .menu1 h1 span::after,
+    .menu2 h1 span::after {
+        bottom: 10px;
+    }
+
+    .menu_box {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+
+    .menu_card {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .small_card {
+        top: -40px;
+    }
+}
+
+
+
+/* Gaya khusus untuk layar berukuran besar (desktop) */
+@media only screen and (min-width: 1024px) {
+    .menu h1 {
+        font-size: 40px;
+    }
+
+    /* ... tambahkan penyesuaian lainnya ... */
+
+    /* Penyesuaian untuk menu card di layar desktop */
+    .menu_card {
+        width: 325px;
+        margin: 0 auto;
+    }
+}

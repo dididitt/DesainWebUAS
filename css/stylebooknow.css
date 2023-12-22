@@ -1,0 +1,82 @@
+
+.reservation{
+   background-color: #191919;
+
+}
+.reservation form{
+   border-radius: 5px;
+   border-color: #FFCE45 ;   
+   padding: 2rem;
+}
+
+.reservation form .flex{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+   border-radius: 5px;
+   border-color: #FFCE45 ; 
+}
+
+.reservation form h3{
+   background-color: #FFCE45;
+   color: #191919;
+   font-size: 2.5rem;
+   margin-bottom: 2rem;
+   border-radius: .5rem;
+   padding: 1.2rem;
+   text-align: center;
+   text-transform: capitalize;
+}
+
+.reservation form .flex .box{
+   flex: 1 1 40rem;
+}
+
+.reservation form .flex .box p{
+   font-size: 1.8rem;
+   color: #FFCE45;
+}
+
+.reservation form .flex .box .input{
+   padding: 1rem 0;
+   margin: 1rem 0;
+   border-bottom: var(--border);
+   background: #F6D860;
+   color: white;
+   font-size: 1.8rem;
+   width: 100%;
+}
+
+.reservation form .flex .box input[type="date"]::-webkit-calendar-picker-indicator{
+   filter: invert(1);
+}
+
+
+@media only screen and (max-width: 767px) {
+    .reservation form .flex .box {
+        flex: 1 1 100%; /* Menggunakan 100% lebar pada perangkat seluler */
+    }
+
+    .reservation form .flex .box select,
+    .reservation form .flex .box input {
+        width: 100%; /* Mengisi lebar maksimum */
+    }
+
+    .reservation form .flex {
+        padding: 1rem; /* Memberikan padding pada container untuk perangkat seluler */
+    }
+}
+
+/* Gaya khusus untuk layar berukuran sedang (tablet) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .reservation form .flex .box {
+        flex: 1 1 calc(50% - 1rem); /* Menggunakan 50% lebar pada tablet dengan jarak antar elemen */
+    }
+}
+
+/* Gaya khusus untuk layar berukuran besar (laptop) */
+@media only screen and (min-width: 1024px) {
+    .reservation form .flex .box {
+        flex: 1 1 calc(33.33% - 1rem); /* Menggunakan 33.33% lebar pada laptop dengan jarak antar elemen */
+    }
+}

@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root {
+    --pr-color : #FFCE45;
+}
+
+.gallery .slide img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery .slide .icon{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.gallery .slide .icon i{
+    font-size: 6rem;
+    color: var(--white);
+}
+
+.gallery .slide:hover .icon{
+    display: flex;
+}
+.heading {
+    padding: 100px 0 50px;
+    text-align: center;
+    color: var(--pr-color);
+    font-size: 50px;
+}
